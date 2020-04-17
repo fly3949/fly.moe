@@ -39,10 +39,7 @@ function getAchives() {
 function getHitokoto() {
     $.ajax({
         url: "https://v1.hitokoto.cn/",
-        dataType: "jsonp",
-        async: true,
-        jsonp: "callback",
-        jsonpCallback: "echokoto",
+        dataType: "json",
         success: function (result) {
             write(result.hitokoto + " —— " + result.from);
         },
