@@ -22,7 +22,7 @@ function getAchives() {
     t = ``;
     $.ajax({
         type: "GET",
-        url: api + "wp-json/wp/v2/posts?per_page=10&page=1",
+        url: api + "wp-json/wp/v2/posts?per_page=10&page=1&_fields=date,title,link",
         dataType: "json",
         success: function (json) {
             for (var i = 0; i < json.length; i++) {
